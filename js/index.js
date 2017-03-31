@@ -14,8 +14,8 @@ export default function draftToHtml(
 ): string {
   const html = [];
   if (editorContent) {
-    const { getBlocksAsArray, entityMap } = editorContent;
-    const blocks = getBlocksAsArray();
+    const { entityMap } = editorContent;
+    const blocks = editorContent.getBlocksAsArray();
     if (blocks && blocks.length > 0) {
       let listBlocks = [];
       blocks.forEach((block) => {
